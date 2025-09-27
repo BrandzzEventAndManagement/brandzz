@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brandzz - Event Management</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: #fdfdfd;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+    header {
+      height: 100vh;
+      background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.6)), url('banner.jpg') center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      animation: fadeIn 2s ease-in-out;
+    }
+    header h1 {
+      font-size: 4rem;
+      margin: 0;
+      animation: slideIn 2s ease;
+    }
+    header p {
+      font-size: 1.3rem;
+      margin-top: 10px;
+      animation: fadeUp 2.5s ease;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.7);
+      padding: 10px 0;
+      display: flex;
+      justify-content: center;
+      z-index: 1000;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 1.1rem;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ff9800;
+    }
+    section {
+      padding: 80px 10%;
+    }
+    .about, .services, .gallery, .contact {
+      text-align: center;
+    }
+    .services .card {
+      display: inline-block;
+      width: 250px;
+      margin: 20px;
+      padding: 20px;
+      border-radius: 15px;
+      background: #fff;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .services .card:hover {
+      transform: scale(1.05);
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+      gap: 20px;
+    }
+    .gallery-grid img, .gallery-grid video {
+      width: 100%;
+      border-radius: 12px;
+      transition: transform 0.3s;
+    }
+    .gallery-grid img:hover, .gallery-grid video:hover {
+      transform: scale(1.03);
+    }
+    footer {
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 20px 10px;
+    }
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes slideIn {
+      from { transform: translateY(-50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes fadeUp {
+      from { transform: translateY(50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <header>
+    <h1>Brandzz Events</h1>
+    <p>Creating unforgettable experiences for your special moments</p>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>At Brandzz, we bring your events to life with creativity, passion, and style. From weddings to corporate events, we manage everything flawlessly.</p>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <h2>Our Services</h2>
+    <div class="card">🎉 Wedding Planning</div>
+    <div class="card">🏢 Corporate Events</div>
+    <div class="card">🎶 Music & Entertainment</div>
+    <div class="card">🍽️ Catering & Decoration</div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery-grid">
+      <img src="event1.jpg" alt="Event 1">
+      <img src="event2.jpg" alt="Event 2">
+      <video controls>
+        <source src="event-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <img src="event3.jpg" alt="Event 3">
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>Email: contact@brandzz.com | Phone: +91 98765 43210</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Brandzz Event Management | Designed with ❤️</p>
+  </footer>
+</body>
+</html>
